@@ -25,6 +25,12 @@
 		B51B78C62A0E346B008ACC50 /* VIHTreatmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78C52A0E346B008ACC50 /* VIHTreatmentView.swift */; };
 		B51B78C82A0E368C008ACC50 /* QuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78C72A0E368C008ACC50 /* QuizView.swift */; };
 		B51B78CA2A0E38EE008ACC50 /* MentalHealthHotlinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78C92A0E38EE008ACC50 /* MentalHealthHotlinesView.swift */; };
+		B51B78EC2A0E62A2008ACC50 /* ChatGPTSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B51B78EB2A0E62A2008ACC50 /* ChatGPTSwift */; };
+		B51B78EF2A0E62DB008ACC50 /* DataAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78EE2A0E62DB008ACC50 /* DataAPI.swift */; };
+		B51B78F12A0E6306008ACC50 /* APIOpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78F02A0E6306008ACC50 /* APIOpenAI.swift */; };
+		B51B78F32A0E6323008ACC50 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78F22A0E6323008ACC50 /* Message.swift */; };
+		B51B78F52A0E6366008ACC50 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78F42A0E6366008ACC50 /* MessageView.swift */; };
+		B51B78F72A0E63BE008ACC50 /* TestElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51B78F62A0E63BE008ACC50 /* TestElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,11 @@
 		B51B78C52A0E346B008ACC50 /* VIHTreatmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIHTreatmentView.swift; sourceTree = "<group>"; };
 		B51B78C72A0E368C008ACC50 /* QuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizView.swift; sourceTree = "<group>"; };
 		B51B78C92A0E38EE008ACC50 /* MentalHealthHotlinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentalHealthHotlinesView.swift; sourceTree = "<group>"; };
+		B51B78EE2A0E62DB008ACC50 /* DataAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataAPI.swift; sourceTree = "<group>"; };
+		B51B78F02A0E6306008ACC50 /* APIOpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIOpenAI.swift; sourceTree = "<group>"; };
+		B51B78F22A0E6323008ACC50 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B51B78F42A0E6366008ACC50 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B51B78F62A0E63BE008ACC50 /* TestElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51B78EC2A0E62A2008ACC50 /* ChatGPTSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +91,7 @@
 		B51B78982A0D6102008ACC50 /* lgbt */ = {
 			isa = PBXGroup;
 			children = (
+				B51B78ED2A0E62C1008ACC50 /* API */,
 				B51B78AC2A0D69B1008ACC50 /* Constants */,
 				B51B78B12A0D851E008ACC50 /* Components */,
 				B51B78BA2A0DC632008ACC50 /* DetailView */,
@@ -117,6 +130,7 @@
 				B51B78B22A0D852D008ACC50 /* ChatbotCardView.swift */,
 				B51B78B62A0D9AFF008ACC50 /* ProfileCardView.swift */,
 				B51B78C32A0E0203008ACC50 /* PopView.swift */,
+				B51B78F42A0E6366008ACC50 /* MessageView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -131,6 +145,17 @@
 				B51B78C72A0E368C008ACC50 /* QuizView.swift */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		B51B78ED2A0E62C1008ACC50 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B51B78EE2A0E62DB008ACC50 /* DataAPI.swift */,
+				B51B78F02A0E6306008ACC50 /* APIOpenAI.swift */,
+				B51B78F22A0E6323008ACC50 /* Message.swift */,
+				B51B78F62A0E63BE008ACC50 /* TestElements.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +174,9 @@
 			dependencies = (
 			);
 			name = lgbt;
+			packageProductDependencies = (
+				B51B78EB2A0E62A2008ACC50 /* ChatGPTSwift */,
+			);
 			productName = lgbt;
 			productReference = B51B78962A0D6102008ACC50 /* lgbt.app */;
 			productType = "com.apple.product-type.application";
@@ -177,6 +205,9 @@
 				Base,
 			);
 			mainGroup = B51B788D2A0D6102008ACC50;
+			packageReferences = (
+				B51B78EA2A0E62A2008ACC50 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */,
+			);
 			productRefGroup = B51B78972A0D6102008ACC50 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -207,13 +238,18 @@
 				B51B78CA2A0E38EE008ACC50 /* MentalHealthHotlinesView.swift in Sources */,
 				B51B78B52A0D8AE6008ACC50 /* MenuView.swift in Sources */,
 				B51B78B72A0D9AFF008ACC50 /* ProfileCardView.swift in Sources */,
+				B51B78F72A0E63BE008ACC50 /* TestElements.swift in Sources */,
+				B51B78F52A0E6366008ACC50 /* MessageView.swift in Sources */,
 				B51B78C62A0E346B008ACC50 /* VIHTreatmentView.swift in Sources */,
 				B51B78BE2A0DC6B1008ACC50 /* PrevencionVIHView.swift in Sources */,
 				B51B78C02A0DD41B008ACC50 /* ChatView.swift in Sources */,
+				B51B78F32A0E6323008ACC50 /* Message.swift in Sources */,
+				B51B78EF2A0E62DB008ACC50 /* DataAPI.swift in Sources */,
 				B51B78C82A0E368C008ACC50 /* QuizView.swift in Sources */,
 				B51B78C22A0DE382008ACC50 /* VIHCondonView.swift in Sources */,
 				B51B78A82A0D68BE008ACC50 /* HomeView.swift in Sources */,
 				B51B78C42A0E0203008ACC50 /* PopView.swift in Sources */,
+				B51B78F12A0E6306008ACC50 /* APIOpenAI.swift in Sources */,
 				B51B78AE2A0D6A19008ACC50 /* Colors.swift in Sources */,
 				B51B78B02A0D6AE9008ACC50 /* UserView.swift in Sources */,
 				B51B789A2A0D6102008ACC50 /* lgbtApp.swift in Sources */,
@@ -419,6 +455,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B51B78EA2A0E62A2008ACC50 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/ChatGPTSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B51B78EB2A0E62A2008ACC50 /* ChatGPTSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B51B78EA2A0E62A2008ACC50 /* XCRemoteSwiftPackageReference "ChatGPTSwift" */;
+			productName = ChatGPTSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B51B788E2A0D6102008ACC50 /* Project object */;
 }

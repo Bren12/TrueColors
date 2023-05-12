@@ -26,7 +26,7 @@ struct ProfileCardView: View {
                             .clipShape(Circle())
                             .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
                         
-                        Text("Xavier Montoya")
+                        Text("Sam Montoya")
                             .font(.system(size: 30, weight: .heavy))
                             .multilineTextAlignment(.center)
                         
