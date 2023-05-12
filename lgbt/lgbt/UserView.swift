@@ -148,7 +148,7 @@ struct UserView: View {
                     
                     ZStack {
                         
-                        Color.black.opacity(0.4)
+                        Color.black.opacity(0.75)
                             .onTapGesture(perform: {
                                 showVirus = false
                             }) // -> Color.onTapGesture

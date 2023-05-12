@@ -31,6 +31,7 @@ struct PopView: View {
                     
                     Text(virus.name)
                         .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
                         .font(.system(size: 32, weight: .heavy))
                         .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
                     
@@ -156,6 +157,6 @@ struct PopView: View {
 
 struct PopView_Previews: PreviewProvider {
     static var previews: some View {
-        PopView(show: .constant(true), virus: .constant(Virus.ets[0]))
+        PopView(show: .constant(true), virus: .constant(Virus.ets[1]))
     }
 }

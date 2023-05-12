@@ -46,31 +46,114 @@ struct HomeView: View {
                                             .frame(width: 10)
                                         
                                         NavigationLink(destination: VIHView(), label: {
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .fill(Colors.primaryDark)
-                                                .frame(width: 200, height: 250)
-                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                            
+                                            ZStack {
+                                                
+                                                Image("Group2")
+                                                
+                                                ZStack {
+                                                    
+                                                    Image(systemName: "magnifyingglass")
+                                                        .font(.system(size: 150))
+                                                        .foregroundColor(.red.opacity(0.35))
+                                                    
+                                                    VStack {
+                                                        
+                                                        Text("¿Qué es el VIH?")
+                                                            .font(.system(size: 30, weight: .bold))
+                                                            .foregroundColor(.white)
+                                                            .frame(width: 175)
+                                                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                                        
+                                                    } // -> VStack
+                                                    
+                                                } // -> ZStack
+                                                
+                                            } // -> ZStack
                                         })
                                         
                                         NavigationLink(destination: PrevencionVIHView(), label: {
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .fill(Colors.primaryLight)
-                                                .frame(width: 200, height: 250)
-                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                            
+                                            ZStack {
+                                                
+                                                Image("Group3")
+                                                
+                                                ZStack {
+                                                    
+                                                    Image(systemName: "cross.case")
+                                                        .font(.system(size: 125))
+                                                        .foregroundColor(.orange.opacity(0.5))
+                                                    
+                                                    VStack {
+                                                        
+                                                        Text("Medidas de prevención del VIH")
+                                                            .font(.system(size: 30, weight: .bold))
+                                                            .foregroundColor(.white)
+                                                            .frame(width: 175)
+                                                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                                        
+                                                    } // -> VStack
+                                                    
+                                                } // -> ZStack
+                                                
+                                            } // -> ZStack
+                                            
                                         })
                                         
                                         NavigationLink(destination: VIHCondonView(), label: {
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .fill(Colors.primaryDark)
-                                                .frame(width: 200, height: 250)
-                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                            
+                                            ZStack {
+                                                
+                                                Image("Group1")
+                                                
+                                                ZStack {
+                                                    
+                                                    Image(systemName: "shield")
+                                                        .font(.system(size: 150))
+                                                        .foregroundColor(.green.opacity(0.6))
+                                                
+                                                    VStack {
+                                                        
+                                                        Text("Uso correcto del condón")
+                                                            .font(.system(size: 30, weight: .bold))
+                                                            .foregroundColor(.white)
+                                                            .frame(width: 175)
+                                                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                                        
+                                                    } // -> VStack
+                                                    
+                                                } // -> ZStack
+                                                
+                                            } // -> ZStack
+                                            
                                         })
                                         
                                         NavigationLink(destination: HIVTreatmentView(), label: {
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .fill(Colors.primaryLight)
-                                                .frame(width: 200, height: 250)
-                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                            
+                                            ZStack {
+                                                
+                                                Image("Group4")
+                                                
+                                                ZStack {
+                                                    
+                                                    Image(systemName: "cross.vial")
+                                                        .font(.system(size: 150))
+                                                        .foregroundColor(.blue.opacity(0.5))
+                                                
+                                                    VStack {
+                                                        
+                                                        Text("Tratamiento del VIH")
+                                                            .font(.system(size: 30, weight: .bold))
+                                                            .foregroundColor(.white)
+                                                            .frame(width: 175)
+                                                            .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                                        
+                                                    } // -> VStack
+                                                    
+                                                } // -> ZStack
+                                                
+                                            } // -> ZStack
+                                            
                                         })
                                         
                                         Spacer()
@@ -82,11 +165,28 @@ struct HomeView: View {
                                 } // -> ScrollView
                                 
                                 NavigationLink(destination: QuizView(), label: {
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .fill(Colors.primaryDark)
-                                        .frame(width: 375, height: 125)
-                                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
-                                        .frame(height: 150)
+                                    
+                                    ZStack {
+                                        
+                                        Image("Group5")
+                                        
+                                        HStack {
+                                                
+                                            Image(systemName: "list.bullet.clipboard")
+                                                .font(.system(size: 70))
+                                                .foregroundColor(.pink.opacity(0.35))
+                                                .offset(y: -7.5)
+                                                
+                                            Text("VIH Quiz")
+                                                .font(.system(size: 30, weight: .bold))
+                                                .foregroundColor(.white)
+                                                .frame(width: 150)
+                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                                
+                                            } // -> HStack
+                                        
+                                    } // -> ZStack
+                                    
                                 })
                                 
                                 
