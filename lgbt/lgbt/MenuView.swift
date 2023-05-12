@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-var tabs = ["house.fill", "message.fill", "person.fill"]
+var tabs = ["house.fill", "message.fill", "phone.fill", "person.fill"]
 
 struct CustomShape: Shape {
     
@@ -72,6 +72,10 @@ struct MenuView: View {
                 ChatView()
                     .ignoresSafeArea()
                     .tag("message.fill")
+                
+                MentalHealthHotlinesView()
+                    .ignoresSafeArea()
+                    .tag("phone.fill")
                 
                 UserView()
                     .ignoresSafeArea()
@@ -143,9 +147,11 @@ struct MenuView: View {
             
             case "house.fill":
                 return Colors.primaryDark
-            case "person.fill":
-                return Colors.primaryDark
             case "message.fill":
+                return Colors.primaryDark
+            case "phone.fill":
+                return Colors.primaryDark
+            case "person.fill":
                 return Colors.primaryDark
             default:
                 return Color.blue

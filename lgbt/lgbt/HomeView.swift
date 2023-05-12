@@ -66,6 +66,13 @@ struct HomeView: View {
                                                 .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
                                         })
                                         
+                                        NavigationLink(destination: HIVTreatmentView(), label: {
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .fill(Colors.primaryLight)
+                                                .frame(width: 200, height: 250)
+                                                .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                        })
+                                        
                                         Spacer()
                                             .frame(width: 10)
                                         
@@ -74,11 +81,13 @@ struct HomeView: View {
                                     
                                 } // -> ScrollView
                                 
-                                RoundedRectangle(cornerRadius: 20)
-                                    .fill(Colors.primaryDark)
-                                    .frame(width: 375, height: 125)
-                                    .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
-                                    .frame(height: 150)
+                                NavigationLink(destination: QuizView(), label: {
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(Colors.primaryDark)
+                                        .frame(width: 375, height: 125)
+                                        .shadow(color: Color.black.opacity(0.3), radius: 10, x: 0, y: 5)
+                                        .frame(height: 150)
+                                })
                                 
                                 
                             } // -> VStack

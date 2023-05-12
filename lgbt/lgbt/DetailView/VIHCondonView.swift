@@ -107,7 +107,7 @@ struct VIHCondonView: View {
                                             
                                         }) // -> NavigationLink
                                         
-                                        NavigationLink(destination: VIHCondonView(), label: {
+                                        NavigationLink(destination: HIVTreatmentView(), label: {
                                             
                                             LinearGradient(gradient: Gradient(colors: colors), startPoint: .leading, endPoint: .trailing) // Agregar gradiente al fondo del botón
                                                 .mask(Image(systemName: "arrow.right") // Usar el icono de flecha como máscara
