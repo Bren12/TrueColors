@@ -7,9 +7,23 @@
 
 import SwiftUI
 
+class VirusViewModel: ObservableObject {
+    @Published var virus: [Virus] = Virus.ets
+}
+
 struct UserView: View {
     
+    @ObservedObject var viewModel = VirusViewModel()
+    
     @State private var showVirus = false
+    @State var virus = Virus.ets[0]
+    
+    
+    var dateFormat: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/YYYY"
+        return formatter
+    }
     
     var body: some View {
         
@@ -33,9 +47,12 @@ struct UserView: View {
                         
                         ScrollView {
                             
-                            ForEach(Virus.ets) { virus in
+                            ForEach(viewModel.virus) { virus in
                                 
                                 Button(action: {
+                                    
+                                    showVirus = true
+                                    self.virus = virus
                                     
                                 }, label: {
                                     
@@ -77,8 +94,8 @@ struct UserView: View {
                                                 
                                                 Spacer()
                                                     .frame(height: virus.name.count > 10 ? 50 : 100)
-    //
-                                                Text("Última actualización: \(virus.date)")
+                                                
+                                                Text("Última actualización: \(dateFormat.string(from: virus.date))")
                                                     .foregroundColor(.white)
                                                     .font(.system(size: 20, weight: .medium))
                                                 
@@ -125,10 +142,41 @@ struct UserView: View {
                 } // -> ZStack
                 
             } // -> ZStack
+            .overlay {
+                
+                if showVirus {
+                    
+                    ZStack {
+                        
+                        Color.black.opacity(0.4)
+                            .onTapGesture(perform: {
+                                showVirus = false
+                            }) // -> Color.onTapGesture
+                        
+                        PopView(show: $showVirus, virus: $viewModel.virus[searchVirus(virus: virus)])
+                        
+                    } // -> ZStack
+                    
+                }  // if-else
+                
+            } // ZStack.overlay
             
         } // -> GeometryReader
         
     } // body
+    
+    func updateVirus(virus: Virus) {
+        if let index = Virus.ets.firstIndex(where: { $0.id == virus.id }) {
+            Virus.ets[index] = virus
+        }
+    }
+    
+    func searchVirus(virus: Virus) -> Int {
+        if let index = Virus.ets.firstIndex(where: { $0.id == virus.id }) {
+            return index
+        }
+        return 0
+    }
     
 } // -> UserView
 

@@ -144,7 +144,7 @@ struct MenuView: View {
             case "house.fill":
                 return Colors.primaryDark
             case "person.fill":
-                return Colors.primaryLight
+                return Colors.primaryDark
             case "message.fill":
                 return Colors.primaryDark
             default:

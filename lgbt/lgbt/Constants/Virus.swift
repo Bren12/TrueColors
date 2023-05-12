@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct Virus: Identifiable {
-    let id = UUID()
-    let name: String
-    let status: Bool
-    let date: String
-    let color1: Color
-    let color2: Color
-    let image: String
+    var id = UUID()
+    var name: String
+    var status: Bool
+    var date: Date
+    var color1: Color
+    var color2: Color
+    var image: String
 }
 
 extension Virus {
-    static let ets: [Virus] = [
-        Virus(name: "VIH", status: false, date: "03/05/2023", color1: Colors.cardRedDark, color2: Colors.cardRedLight, image: "VIH"),
-        Virus(name: "Papiloma\nHumano", status: false, date: "03/05/2023", color1: Colors.cardPurpleDark, color2: Colors.cardPurpleLight, image: "VPH")
+    static var ets: [Virus] = [
+        Virus(name: "VIH", status: false, date: Date(), color1: Colors.cardRedDark, color2: Colors.cardRedLight, image: "VIH"),
+        Virus(name: "Papiloma\nHumano", status: false, date: Date(), color1: Colors.cardPurpleDark, color2: Colors.cardPurpleLight, image: "VPH")
     ]
 }

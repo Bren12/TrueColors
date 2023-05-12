@@ -17,4 +17,6 @@ struct Colors {
     static let cardPurpleDark = Color(red: 85/255, green: 44/255, blue: 100/255)
     static let cardPurpleLight = Color(red: 234/255, green: 185/255, blue: 254/255)
     static let cardPurpleMedium = Color(red: 234/255, green: 185/255, blue: 254/255)
+    static let goodDark = Color(red: 35/255, green: 99/255, blue: 49/255)
+    static let goodLight = Color(red: 193/255, green: 234/255, blue: 106/255)
 }
